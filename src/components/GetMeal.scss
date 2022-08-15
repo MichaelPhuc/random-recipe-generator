@@ -1,0 +1,140 @@
+@import "../global.scss";
+
+body{
+    background-color: #FFFFF0;
+    
+}
+
+//get meal button
+.get-meal{
+    padding: 15px;
+    border: unset;
+    border-radius: 15px;
+    color: #224B0C;
+    z-index: 1;
+    background: #C1D5A4;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+ }
+
+ .get-meal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #224B0C;
+    z-index: -1;
+    transition: all 250ms
+   }
+   
+.get-meal:hover {
+    color: #C1D5A4;
+}
+
+.get-meal:hover::before {
+    width: 100%;
+}
+
+
+.meal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile{
+        flex-direction: column;
+        margin: 10px;
+   
+    }
+
+    h4 {
+        font-size: 20px;
+        text-align: center;
+
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+
+    img {   
+        border-radius: 5%;
+        width: 420px;
+        height: 400px;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 20px;
+        border: 1px solid;
+        
+    }
+    .video{  
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        
+        .video-resource {
+            h3{
+                text-align: center;
+            }  
+          }
+      }
+      
+}
+
+.guide {
+    display: flex;
+    justify-content: center;
+
+    @include mobile{
+        flex-direction: column;
+      }
+    
+    .instructions{
+        display: inline-block;
+        flex-direction: column;
+        align-items: center;
+        width:50%;
+        max-width:50%;
+        overflow: hidden;
+        
+        @include mobile{
+            margin: 10px;
+            width:95%;
+            max-width: 95%; 
+         }
+        
+    }
+    .row{
+        
+        h3{
+            margin-left: 10px;
+        }
+
+        ul{
+            margin: 10px;
+            padding: 0;
+            list-style: circle;
+            width:250px;
+            max-width:250px;
+            
+            li{
+                font-size: 14px;
+                padding: 2px;
+            }
+        }
+    }
+    
+      
+
+}
+
+  
