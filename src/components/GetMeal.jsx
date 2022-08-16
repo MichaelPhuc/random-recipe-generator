@@ -46,12 +46,12 @@ class Meal extends Component {
                                     <div className='meal'>
                                         <div className="img">
                                             <h4>{meal.strMeal}</h4>
-                                            <img src={meal.strMealThumb} className="img-thumb"/>
+                                            <img src={meal.strMealThumb} className="img-thumb" alt="meal"/>
                                         </div>
                                         <div className="video">
                                                 <div className="video-resource">
                                                     <h3>Video Recipe</h3>
-                                                    <iframe width="420" height="315" src={`https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}`}>
+                                                    <iframe width="420" height="315" title="meal video" src={`https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}`}>
                                                         
                                                     </iframe>
                                                 </div>
